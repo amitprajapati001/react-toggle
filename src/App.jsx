@@ -4,24 +4,28 @@ import './App.css'
 
 function App() {
 
-  const [toggle,setToggle]=useState(false)
+  const [toggle,setToggle]=useState("")
 
 
-  function handleClick(){
-        setToggle(!toggle)
-  }
+  // function handleClick(){
+  //       setToggle(!toggle)
+  // }
 
   return (
     <>
      
        
       <div className="card">
-        <button onClick={() => handleClick()}>
+        {/* <button onClick={() => handleClick()}>
         Click Me
         </button>
 
 
-        {toggle &&  <p>Hi I am Visible</p>}
+        {toggle &&  <p>Hi I am Visible</p>} */}
+
+        <input  onChange={(e)=>setToggle(e.target.value)} />
+
+        <p className='togglepara'>{toggle}</p>
     
       </div>
   
