@@ -1,36 +1,27 @@
-import { useState } from 'react'
+import useLocalStorage from "./useLocalStorage"
 
-import './App.css'
 
 function App() {
 
-  const [toggle,setToggle]=useState("")
+  const {val,setValue}=useLocalStorage("hello","Amit")
 
+  console.log(val,"line3758")
 
-  // function handleClick(){
-  //       setToggle(!toggle)
-  // }
+    // setValue{"sunita"}
+ 
 
   return (
     <>
-     
-       
-      <div className="card">
-        {/* <button onClick={() => handleClick()}>
-        Click Me
-        </button>
+    <div className="maindiv">
+            
 
+<h1>{val}</h1>
 
-        {toggle &&  <p>Hi I am Visible</p>} */}
-
-        <input  onChange={(e)=>setToggle(e.target.value)} />
-
-        <p className='togglepara'>{toggle}</p>
+<button onClick={()=>  setValue("Aman")}  >Click me</button>
     
-      </div>
-  
+    </div>
+    
     </>
   )
 }
-
 export default App
